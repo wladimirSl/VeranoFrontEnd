@@ -15,17 +15,62 @@ body {
   margin: 0 auto;
 }
 
+.letras span{
+font-size: 40px;
+position: relative;
+font-family: 'Monoton', cursive;
+cursor: pointer;
+transition: all 300ms ease-in-out;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+.letras span::before{
+content: var(--l);
+position: absolute;
+transform: scale(1.1);
+filter: blur(15px);
+
+}
+
+.letras span::after{
+  content: var(--l);
+  position: absolute;
+  top: 5%;
+  left: 0;
+  filter: blur(30px);
+  transform: rotateX(50deg);
+}
+
+.letras span:hover{
+  filter: contrast(250%);
+}
+.letras span:nth-child(1){
+  color: #00bef8;
+}
+.letras span:nth-child(2){
+  color: #ff6097;
+}
+.letras span:nth-child(3){
+  color: #ff4d00;
+}
+.letras span:nth-child(4){
+  color: limegreen;
+}
+.letras span:nth-child(5){
+  color: #bb00ff;
+}
+.letras span:nth-child(6){
+  color: #ff6097;
+}
+.letras span:nth-child(7){
+  color: #00bef8;
+}
+
 .btns {
   text-align: center;
   margin-top: 25px;
 }
 
-h2 {
-  font-family: "Chelsea Market", cursive;
-  color: #f6f6f6;
-  align-content: center;
-  text-align: center;
-}
 
 .lnk {
   border: transparent;
@@ -84,15 +129,15 @@ img {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, 133px);
-  grid-auto-rows: 200px;
+  grid-auto-rows: 255px;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .fotos {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   grid-column: span 2; /*266px +17px=283px*/
-  height: 280px;
+  height: 255px;
   transition: 0.5s filter;
 }
 
